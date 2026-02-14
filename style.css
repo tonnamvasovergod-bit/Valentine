@@ -1,0 +1,134 @@
+/* ล้างค่าเริ่มต้น */
+* { 
+    box-sizing: border-box; 
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 100%);
+    font-family: 'Mali', cursive;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* เอฟเฟกต์หัวใจลอย */
+.heart {
+    position: absolute;
+    color: #ff4b2b;
+    opacity: 0.5;
+    animation: floatUp 5s infinite ease-in;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(110vh) scale(0.5); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-10vh) scale(1.2) rotate(360deg); opacity: 0; }
+}
+
+/* การ์ดหลัก */
+.login-card {
+    position: relative;
+    z-index: 10;
+    width: 85%;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 154, 158, 0.4);
+    animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+h1 { color: #d63031; font-size: 1.8rem; margin: 0 0 15px 0; }
+.hint-main { color: #444; font-size: 1rem; font-weight: bold; }
+.hint-example { color: #636e72; font-size: 0.85rem; margin: 5px 0 25px 0; }
+
+input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    border: 2px solid #ffb8b8;
+    outline: none;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #d63031;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+input:focus { border-color: #d63031; box-shadow: 0 0 15px rgba(214, 48, 49, 0.2); }
+
+button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    border: none;
+    background: #d63031;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(214, 48, 49, 0.3);
+    transition: 0.3s;
+}
+
+button:active { transform: scale(0.95); }
+
+/* สั่นเมื่อใส่รหัสผิด */
+.shake { animation: shake 0.5s; }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Modal Style */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    animation: popUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-icon { font-size: 3.5rem; margin-bottom: 10px; }
+.modal-content h2 { color: #d63031; margin: 0; }
+.modal-content p { color: #636e72; margin: 15px 0 25px 0; line-height: 1.6; }

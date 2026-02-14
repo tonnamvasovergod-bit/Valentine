@@ -1,0 +1,109 @@
+* { 
+    box-sizing: border-box; 
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fecfef;
+    background: linear-gradient(180deg, #ffafbd 0%, #fecfef 100%);
+    font-family: 'Mali', cursive;
+    color: #d63031;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 25px;
+    margin: 20px 0 40px 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.photo-frame {
+    background: white;
+    padding: 12px 12px 40px 12px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: rotate(-2deg);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.photo-frame:nth-child(even) { 
+    transform: rotate(2deg); 
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+.fade-in { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: 1s ease-out; 
+}
+
+.fade-in.appear { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* ปุ่มควบคุมเพลง */
+#music-control {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: #d63031;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.heart { 
+    position: fixed; 
+    color: #ff4b2b; 
+    animation: floatUp 5s linear forwards; 
+    z-index: 1; 
+    opacity: 0.6; 
+    pointer-events: none; 
+}
+
+@keyframes floatUp { 
+    to { transform: translateY(-110vh) rotate(360deg); opacity: 0; } 
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valentine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="heart-bg"></div>
+
+    <div class="login-card" id="card">
+        <h1>Login</h1>
+        <div class="hint-container">
+            <div class="hint-main">โปรดใส่รหัสผ่านเพื่อดู Secret Angle</div>
+            <div class="hint-example">คำใบ้: วันพิเศษของเรา (เช่น 12/02/2549)</div>
+        </div>
+        
+        <input type="tel" id="passInput" placeholder="00/00/0000" maxlength="10">
+        
+        <button onclick="validate()">เปิดประตูหัวใจ</button>
+    </div>
+
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="modalIcon" class="modal-icon">❤️</div>
+            <h2 id="modalTitle">แจ้งเตือน</h2>
+            <p id="modalMessage">ข้อความ</p>
+            <button id="modalBtn">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Memory ❤️</title>
+    <link rel="stylesheet" href="style-page2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="heart-bg"></div>
+
+    <div class="container">
+        <header class="fade-in">
+            <h1 class="main-title">Happy Valentine❤️</h1>
+            <div class="quote-box">
+                <p>"ขอบคุณที่เข้ามาเป็นความสุขในชีวิตเรา เราอาจจะไม่เก่งทุกอย่าง แต่เราจะรักเธอให้ดีที่สุด"</p>
+            </div>
+        </header>
+
+        <div class="gallery">
+            <div class="photo-frame fade-in" onclick="createBurst(event)">
+                <img src="S__11649035.jpg">
+            </div>
+            <div class="photo-frame fade-in" onclick="createBurst(event)">
+                <img src="S__11649036.jpg">
+            </div>
+            <div class="photo-frame fade-in" onclick="createBurst(event)">
+                <img src="S__11649041.jpg">
+            </div>
+        </div>
+
+        <div class="footer-msg fade-in">
+            <p>🎵 กำลังเล่น: ฉันรักเธอ - Tattoo Colour</p>
+        </div>
+    </div>
+
+    <audio id="loveSong" loop>
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="music-control" onclick="toggleMusic()">
+        <span id="music-icon">🎵</span>
+    </div>
+
+    <script src="script-page2.js"></script>
+</body>
+</html>
